@@ -62,34 +62,6 @@ const deleteTodo = async (req, res) => {
   }
 };
 
-// Sigup
-// const signup = async (req, res) => {
-//   const { email, password } = req.body;
-//   const saltRounds = await bcrpyt.genSalt(10);
-//   const hashedPassword = await bcrpyt.hash(password, saltRounds);
-//   try {
-//     const signup = await pool.query(
-//       `INSERT INTO users (email, hashed_password) VALUES ($1, $2)`,
-//       [email, password]
-//     );
-
-//     const token = createToken(email);
-
-//     res.json({ email, token });
-//   } catch (err) {
-//     console.error(err);
-//   }
-// };
-
-// // login
-// const login = async (req, res) => {
-//   const { email, password } = req.body;
-//   try {
-//   } catch (err) {
-//     console.error(err);
-//   }
-// };
-
 module.exports = {
   getAllTodos,
   createTodo,
